@@ -1,0 +1,22 @@
+install dependencies
+    pip install -r requirements.txt
+install chromedriver
+    pip install webdriver-manager
+update the browser automation service
+
+# Add to services/browser_automation.py
+from webdriver_manager.chrome import ChromeDriverManager
+
+# Update init_driver method:
+def init_driver(self, headless=False):
+    chrome_options = Options()
+    if headless:
+        chrome_options.add_argument('--headless')
+    
+    # Use webdriver-manager to handle ChromeDriver
+    service = webdriver.ChromeService(ChromeDriverManager().install())
+    self.driver = webdriver.Chrome(service=service, options=chrome_options)
+    # ... rest of the method
+
+run the application
+    python app.py

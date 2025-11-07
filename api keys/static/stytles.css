@@ -1,0 +1,26 @@
+.data-output {
+    height: 400px;
+    overflow-y: auto;
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9em;
+}
+
+.data-item {
+    margin-bottom: 10px;
+    padding: 8px;
+    border-left: 3px solid #007bff;
+    background-color: white;
+}
+
+.encryption-warning {
+    border-left-color: #dc3545;
+    background-color: #fff5f5;
+}
+
+.network-request {
+    border-left-color: #28a745;
+    background-color: #f8fff9;
+}
